@@ -5,6 +5,7 @@
   "keywords": [
     "chai",
     "connect",
+    "express",
     "middleware"
   ],
   "repository": {
