@@ -25,7 +25,7 @@ describe('Response', function() {
   
     before(function(done) {
       res = new Response(function() {
-        done();
+        process.nextTick(done);
       });
       res.redirect('http://www.example.com/foo')
     });
@@ -41,7 +41,7 @@ describe('Response', function() {
   
     before(function(done) {
       res = new Response(function() {
-        done();
+        process.nextTick(done);
       });
       res.redirect('http://www.example.com/foo', 303)
     });
@@ -57,7 +57,7 @@ describe('Response', function() {
   
     before(function(done) {
       res = new Response(function() {
-        done();
+        process.nextTick(done);
       });
       res.end()
     });
@@ -73,7 +73,7 @@ describe('Response', function() {
   
     before(function(done) {
       res = new Response(function() {
-        done();
+        process.nextTick(done);
       });
       res.end('Hello')
     });
