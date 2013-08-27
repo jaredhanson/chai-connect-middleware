@@ -52,7 +52,7 @@ describe('middleware test', function() {
         res = r;
         done();
       })
-      .dispatch(new Error('something went wrong'));
+      .dispatch();
   });
 
   it('should send correct body', function() {
