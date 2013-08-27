@@ -1,0 +1,51 @@
+{
+  "name": "chai-connect-middleware",
+  "version": "0.1.0",
+  "description": "Helpers for testing Connect middleware with the Chai assertion library.",
+  "keywords": [
+    "chai",
+    "connect",
+    "middleware"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/chai-connect-middleware.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/chai-connect-middleware/issues"
+  },
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  },
+  "testling": {
+    "browsers": [
+      "chrome/latest"
+    ],
+    "harness" : "mocha",
+    "files": [
+      "test/bootstrap/testling.js",
+      "test/*.test.js"
+    ]
+  }
+}
