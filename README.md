@@ -41,7 +41,7 @@ case.
 
 ```javascript
 describe('middleware test', function() {
-  var res = res;
+  var res;
     
   before(function(done) {
     chai.connect(middleware)
