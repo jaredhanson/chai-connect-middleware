@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var Response = require('../lib/response');
 
 describe('Response', function() {
@@ -20,38 +22,6 @@ describe('Response', function() {
     });
   });
   
-  describe('#redirect', function() {
-    var res;
-  
-    before(function(done) {
-      res = new Response(function() {
-        process.nextTick(done);
-      });
-      res.redirect('http://www.example.com/foo')
-    });
-  
-    it('should get set status and location', function() {
-      expect(res.statusCode).to.equal(302);
-      expect(res.getHeader('Location')).to.equal('http://www.example.com/foo');
-    });
-  });
-  
-  describe('#redirect with status', function() {
-    var res;
-  
-    before(function(done) {
-      res = new Response(function() {
-        process.nextTick(done);
-      });
-      res.redirect('http://www.example.com/foo', 303)
-    });
-  
-    it('should get set status and location', function() {
-      expect(res.statusCode).to.equal(303);
-      expect(res.getHeader('Location')).to.equal('http://www.example.com/foo');
-    });
-  });
-  
   describe('#end', function() {
     var res;
   
@@ -59,7 +29,7 @@ describe('Response', function() {
       res = new Response(function() {
         process.nextTick(done);
       });
-      res.end()
+      res.end();
     });
   
     it('should get set status and not body', function() {
@@ -75,7 +45,7 @@ describe('Response', function() {
       res = new Response(function() {
         process.nextTick(done);
       });
-      res.end('Hello')
+      res.end('Hello');
     });
   
     it('should get set status and body', function() {
