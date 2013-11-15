@@ -1,3 +1,5 @@
+/* global describe, it, expect */
+
 var connect = require('..');
 
 describe('chai-connect-middleware', function() {
