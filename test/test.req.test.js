@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var Test = require('../lib/test');
 
 describe('test middleware that prepares request', function() {
@@ -9,7 +11,7 @@ describe('test middleware that prepares request', function() {
   describe('sync', function() {
     
     describe('and dispatches', function() {
-      var ok;
+      var res;
     
       before(function(done) {
         var test = new Test(middleware);
@@ -20,6 +22,34 @@ describe('test middleware that prepares request', function() {
           res = r;
           done();
         }).dispatch();
+      });
+      
+      it('should not have Express extensions', function() {
+        expect(res.redirect).to.be.undefined;
+      });
+    
+      it('should call end callback', function() {
+        expect(res.statusCode).to.be.equal(200);
+        expect(res.body).to.be.equal('World');
+      });
+    });
+    
+    describe('and dispatches with Express extensions', function() {
+      var res;
+    
+      before(function(done) {
+        var test = new Test('express', middleware);
+        test.req(function(req) {
+          req.query = {};
+          req.query.hello = 'World';
+        }).end(function(r) {
+          res = r;
+          done();
+        }).dispatch();
+      });
+      
+      it('should have Express extensions', function() {
+        expect(res.redirect).to.be.a('function');
       });
     
       it('should call end callback', function() {
@@ -33,7 +63,7 @@ describe('test middleware that prepares request', function() {
   describe('async', function() {
     
     describe('and dispatches', function() {
-      var ok;
+      var res;
     
       before(function(done) {
         var test = new Test(middleware);
