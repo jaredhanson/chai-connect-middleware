@@ -1,8 +1,9 @@
 # chai-connect-middleware
 
-[![Build](https://travis-ci.org/jaredhanson/chai-connect-middleware.png)](http://travis-ci.org/jaredhanson/chai-connect-middleware)
+[![Build](https://travis-ci.org/jaredhanson/chai-connect-middleware.png)](https://travis-ci.org/jaredhanson/chai-connect-middleware)
 [![Coverage](https://coveralls.io/repos/jaredhanson/chai-connect-middleware/badge.png)](https://coveralls.io/r/jaredhanson/chai-connect-middleware)
-[![Dependencies](https://david-dm.org/jaredhanson/chai-connect-middleware.png)](http://david-dm.org/jaredhanson/chai-connect-middleware)
+[![Quality](https://codeclimate.com/github/jaredhanson/chai-connect-middleware.png)](https://codeclimate.com/github/jaredhanson/chai-connect-middleware)
+[![Dependencies](https://david-dm.org/jaredhanson/chai-connect-middleware.png)](https://david-dm.org/jaredhanson/chai-connect-middleware)
 
 
 Helpers for testing [Connect](http://www.senchalabs.org/connect/) middleware
