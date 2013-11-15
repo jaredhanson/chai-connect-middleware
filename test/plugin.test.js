@@ -1,10 +1,10 @@
-var connectMiddleware = require('..')
+var plugin = require('..')
   , Test = require('../lib/test');
 
-describe('helper', function() {
+describe('plugin', function() {
   
   var chai = {};
-  connectMiddleware(chai);
+  plugin(chai);
   
   it('should add connect helper to chai', function() {
     expect(chai.connect).to.be.a('function');
