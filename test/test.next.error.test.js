@@ -1,5 +1,6 @@
-var Test = require('../lib/test');
+/* global describe, it, before, expect */
 
+var Test = require('../lib/test');
 
 describe('test error middleware that calls next with error', function() {
   

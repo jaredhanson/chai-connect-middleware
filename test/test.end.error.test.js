@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var Test = require('../lib/test');
 
 describe('test error middleware that calls end', function() {
