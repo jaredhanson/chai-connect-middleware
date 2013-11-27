@@ -20,15 +20,14 @@ with the [Chai](http://chaijs.com/) assertion library.
 Use this plugin as you would all other Chai plugins:
 
 ```javascript
-var chai = require('chai')
-  , connect = require('chai-connect-middleware');
+var chai = require('chai');
 
-chai.use(connect);
+chai.use(require('chai-connect-middleware'));
 ```
 
 #### Write Test Cases
 
-Once used, the `chai.connect` helper function will be available to set up
+Once used, the `chai.connect.use` helper function will be available to set up
 test cases for Connect middleware.
 
 The helper function can be called from a hook to setup the test case.  The
@@ -45,7 +44,7 @@ describe('middleware test', function() {
   var res;
     
   before(function(done) {
-    chai.connect(middleware)
+    chai.connect.use(middleware)
       .req(function(req) {
         req.query = { hello: 'Bob' };
       })
