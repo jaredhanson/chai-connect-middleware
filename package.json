@@ -1,6 +1,6 @@
 {
   "name": "chai-connect-middleware",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Helpers for testing Connect middleware with the Chai assertion library.",
   "keywords": [
     "chai",
