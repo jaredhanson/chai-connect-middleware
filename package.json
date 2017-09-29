@@ -20,16 +20,18 @@
   "bugs": {
     "url": "http://github.com/jaredhanson/chai-connect-middleware/issues"
   },
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
+      "url": "http://opensource.org/licenses/MIT"
     }
   ],
   "main": "./lib",
   "dependencies": {
   },
   "devDependencies": {
+    "make-node": "0.3.x",
     "mocha": "1.x.x",
     "chai": "1.x.x"
   },
