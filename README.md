@@ -36,7 +36,7 @@ when the middleware invokes `next` or `end`s the response.  If the middleware
 finishes in an unexpected way, the test helper will automatically throw an
 exception.
 
-The following demonstrates a [Mocha](http://visionmedia.github.io/mocha/) test
+The following demonstrates a [Mocha](http://mochajs.org/) test
 case.
 
 ```javascript
