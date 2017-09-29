@@ -26,7 +26,7 @@ var chai = require('chai');
 chai.use(require('chai-connect-middleware'));
 ```
 
-#### Write Test Cases
+#### Implement Test Cases
 
 Once used, the `chai.connect.use` helper function will be available to set up
 test cases for Connect middleware.
@@ -62,17 +62,12 @@ describe('middleware test', function() {
 });
 ```
 
-## Tests
-
-    $ npm install
-    $ npm test
-
-## Credits
-
-  - [Jared Hanson](http://github.com/jaredhanson)
-
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+Copyright (c) 2013-2017 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/vK9dyjRnnWsMzzJTQ57fRJpH/jaredhanson/chai-connect-middleware'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/vK9dyjRnnWsMzzJTQ57fRJpH/jaredhanson/chai-connect-middleware.svg' />
+</a>
